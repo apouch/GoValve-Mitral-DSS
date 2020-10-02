@@ -1,5 +1,5 @@
 {
-	"name": "MVsegmentation",
+	"name": "GoValve-Mitral-DSS",
 	"version": "0.1.0",
 	"keywords": [
 		"mitral valve",
@@ -19,14 +19,14 @@
 		 {
       			"name": "APA",
       			"type": "PointLandmark",
-      			"hint": "Anterior peak of the annulus.",
+      			"hint": "Anterior peak of the annulus",
       "required": true
     		},
 
 		{
 			"name": "AC",
 			"type": "PointLandmark",
-			"hint": "Anterior commissure.",
+			"hint": "Anterior commissure",
 			"required": true
 		},
 
