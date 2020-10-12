@@ -1,13 +1,13 @@
 {
 	"name": "GoValve-Mitral",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"keywords": [
 		"mitral valve",
 		"3D TEE",
 		"citation: Pouch AM, Wang H, Takabe M, Jackson BM, Gorman JH, Gorman RC, Yushkevich PA, Sehgal CM. Fully automatic segmentation of the mitral leaflets in 3D transesophageal echocardiographic images using multi-atlas joint label fusion and deformable medial modeling. Medical Image Analysis, 18(1): 118-129"
 		],
-	"shortdesc": "DSS service for mitral valve segmentation and modeling",
-	"longdesc": "Given a 3D TEE image volume, perform segmentation and model fitting",
+	"shortdesc": "DSS service for mitral valve segmentation and modeling at systole",
+	"longdesc": "Given a 3D TEE image volume, perform segmentation and model fitting in the systolic phase. This pipeline is best suited for mitral valves without myxomatous degeneration or severe prolapse",
 	
 	"tags": [
 		{
@@ -16,11 +16,19 @@
 			"hint": "3D TEE image that you want to segment",
 			"required": true
 		},
-		 {
+		
+		{
+			"name": "Rotated Image",
+			"type": "OverlayImage",
+			"hint": "Rotated 3D TEE image in which landmarks were placed",
+			"required": false
+		},
+		
+		{
       			"name": "APA",
       			"type": "PointLandmark",
       			"hint": "Anterior peak of the annulus",
-      "required": true
+      			"required": true
     		},
 
 		{
