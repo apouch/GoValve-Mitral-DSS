@@ -1,6 +1,6 @@
 {
 	"name": "GoValve-Mitral",
-	"version": "0.1.2",
+	"version": "0.2",
 	"keywords": [
 		"mitral valve",
 		"3D TEE",
@@ -56,6 +56,13 @@
 			"name": "MAL",
 			"type": "PointLandmark",
 			"hint": "Midpoint on anterior leaflet tip",
+			"required": true
+		},
+		
+		{
+			"name": "MS",
+			"type": "TimePoint",
+			"hint": "Mid-systolic frame",
 			"required": true
 		}
 
