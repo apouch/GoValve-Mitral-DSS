@@ -1,70 +1,80 @@
 {
 	"name": "GoValve-Mitral",
-	"version": "1.0",
+	"version": "1.1",
 	"keywords": [
 		"mitral valve",
 		"3D TEE",
 		"citation: Pouch AM, Wang H, Takabe M, Jackson BM, Gorman JH, Gorman RC, Yushkevich PA, Sehgal CM. Fully automatic segmentation of the mitral leaflets in 3D transesophageal echocardiographic images using multi-atlas joint label fusion and deformable medial modeling. Medical Image Analysis, 18(1): 118-129"
 		],
-	"shortdesc": "DSS service for mitral valve segmentation and modeling at systole",
+	"shortdesc": "DSS service for mitral valve segmentation and modeling",
 	"longdesc": "Given a 3D TEE image volume, perform segmentation and model fitting in the systolic phase. This pipeline is best suited for mitral valves without myxomatous degeneration or severe prolapse",
 	
 	"tags": [
 		{
-			"name": "Source",
-			"type": "MainImage",
-			"hint": "3D TEE image that you want to segment",
-			"required": true
+		    "name": "Source Image",
+		    "type": "MainImage",
+		    "hint": "Original image (no transform applied)",
+		    "required": true
 		},
-		
 		{
-			"name": "Rotated Image",
-			"type": "OverlayImage",
-			"hint": "Rotated 3D TEE image in which landmarks were placed",
-			"required": false
+		    "name": "APA",
+		    "type": "PointLandmark",
+		    "hint": "Anterior peak of the annulus - systole",
+		    "required": true
 		},
-		
 		{
-      			"name": "APA",
-      			"type": "PointLandmark",
-      			"hint": "Anterior peak of the annulus",
-      			"required": true
-    		},
-
-		{
-			"name": "AC",
-			"type": "PointLandmark",
-			"hint": "Anterior commissure",
-			"required": true
+		    "name": "AC",
+		    "type": "PointLandmark",
+		    "hint": "Anterior commissure (on annulus) - systole",
+		    "required": true
 		},
-
 		{
-			"name": "MPA",
-			"type": "PointLandmark",
-			"hint": "Midpoint on posterior annulus",
-			"required": true
-		},
-
+		    "name": "MPA",
+		    "type": "PointLandmark",
+		    "hint": "Midpoint of the posterior annulus - systole",
+		    "required": true
+		},  
 		{
-			"name": "PC",
-			"type": "PointLandmark",
-			"hint": "Posterior commisure",
-			"required": true
-		},
-
+		    "name": "PC",
+		    "type": "PointLandmark",
+		    "hint": "Posterior commissure (on annulus) - systole",
+		    "required": true
+		},  
 		{
-			"name": "MAL",
-			"type": "PointLandmark",
-			"hint": "Midpoint on anterior leaflet tip",
-			"required": true
-		},
-		
+		    "name": "MAL",
+		    "type": "PointLandmark",
+		    "hint": "Midpoint of the anterior leaflet - systole",
+		    "required": true
+		},  
 		{
-			"name": "MS",
-			"type": "TimePoint",
-			"hint": "Mid-systolic frame",
-			"required": true
-		}
-
-	]
+		    "name": "Start",
+		    "type": "TimePoint",
+		    "hint": "Frame number - start of cardiac cycle",
+		    "required": false
+		},  
+		{
+		    "name": "MS",
+		    "type": "TimePoint",
+		    "hint": "Frame number in mid-systole (landmarked)",
+		    "required": true
+		},  
+		{
+		    "name": "Valve Opening",
+		    "type": "TimePoint",
+		    "hint": "Frame number - mitral valve opening",
+		    "required": false
+		},  
+		{   
+		    "name": "MD",
+		    "type": "TimePoint",
+		    "hint": "Frame number in mid-diastole",
+		    "required": false
+		},  
+		{
+		    "name": "End",
+		    "type": "TimePoint",
+		    "hint": "Frame number - end of cardiac cycle",
+		    "required": false
+		}  
+		]
 }
