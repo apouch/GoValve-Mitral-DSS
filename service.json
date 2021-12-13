@@ -1,6 +1,6 @@
 {
 	"name": "GoValve-Mitral",
-	"version": "1.1",
+	"version": "1.2",
 	"keywords": [
 		"mitral valve",
 		"3D TEE",
@@ -20,31 +20,31 @@
 		    "name": "APA",
 		    "type": "PointLandmark",
 		    "hint": "Anterior peak of the annulus - systole",
-		    "required": true
+		    "required": false
 		},
 		{
 		    "name": "AC",
 		    "type": "PointLandmark",
 		    "hint": "Anterior commissure (on annulus) - systole",
-		    "required": true
+		    "required": false
 		},
 		{
 		    "name": "MPA",
 		    "type": "PointLandmark",
 		    "hint": "Midpoint of the posterior annulus - systole",
-		    "required": true
+		    "required": false
 		},  
 		{
 		    "name": "PC",
 		    "type": "PointLandmark",
 		    "hint": "Posterior commissure (on annulus) - systole",
-		    "required": true
+		    "required": false
 		},  
 		{
 		    "name": "MAL",
 		    "type": "PointLandmark",
 		    "hint": "Midpoint of the anterior leaflet - systole",
-		    "required": true
+		    "required": false
 		},  
 		{
 		    "name": "Start",
